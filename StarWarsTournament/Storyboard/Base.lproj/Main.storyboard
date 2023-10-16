@@ -23,8 +23,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K8X-n4-F9m">
-                                <rect key="frame" x="8" y="111" width="377" height="699"/>
+                                <rect key="frame" x="8" y="140" width="377" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XZX-FK-XC1"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -32,13 +35,16 @@
                         <constraints>
                             <constraint firstItem="K8X-n4-F9m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="BHp-c5-wsB"/>
                             <constraint firstItem="Prf-so-swO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="SIl-Ug-r35"/>
-                            <constraint firstItem="K8X-n4-F9m" firstAttribute="top" secondItem="Prf-so-swO" secondAttribute="top" id="UEX-6j-qmg"/>
                             <constraint firstItem="Prf-so-swO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="VRx-VP-g20"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K8X-n4-F9m" secondAttribute="trailing" constant="8" id="pkc-ra-QDA"/>
+                            <constraint firstItem="K8X-n4-F9m" firstAttribute="top" secondItem="Prf-so-swO" secondAttribute="bottom" constant="8" id="vPI-qO-lXl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K8X-n4-F9m" secondAttribute="bottom" constant="8" id="ydK-Ei-UHt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Star wars Blaster Tournament" id="bZH-06-Fze"/>
+                    <connections>
+                        <outlet property="tableView" destination="K8X-n4-F9m" id="aCi-wQ-zXt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

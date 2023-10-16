@@ -13,7 +13,11 @@ class UserPointsTableViewCell: UITableViewCell {
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
     
-    var pointData: PlayerPoints?
+    var pointData: PlayerPoints? {
+        didSet {
+            updatePlayerCell()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +27,11 @@ class UserPointsTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+    }
+    
+    private func updatePlayerCell() {
+        self.idLabel.text = "\(pointData?.id)"
+        self.pointsLabel.text = "\(pointData?.points)"
     }
     
 }
